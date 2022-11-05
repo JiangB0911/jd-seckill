@@ -30,6 +30,8 @@ public class RushToPurchase implements Runnable {
                 stringListMap = Start.manager.get(new URI("https://trade.jd.com/shopping/order/getOrderInfo.action"), stringListMap);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
             List<String> cookie = stringListMap.get("Cookie");
             headers.put("Cookie", cookie.get(0).toString());
@@ -62,6 +64,8 @@ public class RushToPurchase implements Runnable {
                 stringListMap = Start.manager.get(new URI("https://trade.jd.com/shopping/order/getOrderInfo.action"), stringListMap);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
             cookie = stringListMap.get("Cookie");
             headers.put("Cookie", cookie.get(0).toString());

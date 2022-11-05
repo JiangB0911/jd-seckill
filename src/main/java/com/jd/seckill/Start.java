@@ -1,10 +1,10 @@
 package com.jd.seckill;
 
 import com.alibaba.fastjson.JSONObject;
-import com.sun.webkit.network.CookieManager;
 
 import java.io.IOException;
 import java.net.CookieHandler;
+import java.net.CookieManager;
 import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.util.Scanner;
